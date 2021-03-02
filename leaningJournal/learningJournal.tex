@@ -1,0 +1,38 @@
+\documentclass{article} %documentclass 表示文档种类 article程序文档 report论文 book 书籍
+\usepackage{ctex}       %usepackage 引入宏包 类似于c语言的头文件 
+\usepackage{metalogo}
+\usepackage{lipsum}
+\usepackage{newtxtext,newtxmath}
+\usepackage{booktabs}
+\usepackage{listings}
+%设置代码段基本参数
+
+\lstset{
+    language = C++,                     % the language of code
+    columns = fixed,
+    % numbers = left,
+    % numbersep = 5pt,
+    % tabsize = 4,
+}                    
+%begin end 类似于c语言的语句块{}
+\begin{document}            %正文
+
+\begin{titlepage}           %标题页
+\title{学习日志} %标题
+\maketitle                  %生成标题
+\end{titlepage}
+\tableofcontents        %生成目录
+\newpage                %换页
+
+\section{202103}      %目录结构  part、chapter、section、subsection、subsubsection、paragraph、subparagraph
+                        %\par 换行
+\subsection{20210301}
+\subsubsection{学习github操作}
+    学习创建仓库\par
+    学习调教pull请求\par
+    学习合并\par
+\subsection{20210302}
+\subsubsection{学习c++Primer}
+    复习复合类型\par
+    复习const限定\par
+\end{document}
