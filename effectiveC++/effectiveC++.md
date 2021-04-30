@@ -72,7 +72,7 @@
 *   普遍而常见的RAII class copying 行为时：抑制copying、施行引用计数法。不过其他行为可都可以能被实现。
 
 
-##  条款15：在资源管理类中提供对原始资源的访问、
+##  条款15：在资源管理类中提供对原始资源的访问
 *   APIs往往要求访问原始资源，所以每一个RAII class应该提供一个“取得其所管理之资源”的办法
 *   对原始资源的访问可能经由显示转换或隐式转换。一般而言显示转换比较安全，但隐式转换对客户比较方便。
 
@@ -113,3 +113,12 @@
 ##  条款21：必须返回对象是，别妄想返回器reference
 *   绝对不要返回pointer或reference指向一个local stack对象，或返回reference指向一个heap-allocated对象，
     或返回pointer或reference指向一个local static对象而有可能同时需要多个这样的对象。
+
+##  条款22：将成员变量声明为private
+*   切记将成员变量声明为private。这可赋予用户访问数据的一致性、可细微划分访问控制、允诺约束条件获得保证，并提供class作者以充分的实现弹性
+*   protected并不比public更具封装性
+
+##  条款23：宁以non-member、non-friend替换member函数
+*   宁可拿non-member non-friend 函数替换member函数。这样做可以增加封装性、包裹弹性和机能扩充性
+
+##  
